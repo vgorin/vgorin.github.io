@@ -1,0 +1,1406 @@
+<html><head>
+
+<title>Клан ХРАНИТЕЛИ / L2on.ru</title>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251">
+<meta http-equiv="content-language" content="ru">
+<meta http-equiv="Pragma" content="no-cache">
+
+
+<link href="common_files/main.css" rel="stylesheet" media="all">
+<link href="common_files/jquery.css" rel="stylesheet" media="all">
+<link href="common_files/jquery-ui-1.css" rel="stylesheet" media="all">
+<script type="text/javascript" src="common_files/jquery-1.js"></script>
+<script type="text/javascript" src="common_files/jquery_006.js"></script>
+<script type="text/javascript" src="common_files/jquery_005.js"></script>
+<script type="text/javascript" src="common_files/jquery_002.js"></script>
+<script type="text/javascript" src="common_files/jquery_003.js"></script>
+<script type="text/javascript" src="common_files/jquery_004.js"></script>
+<script type="text/javascript" src="common_files/tablesorter.js"></script>
+<script type="text/javascript" src="common_files/jquery-ui-1.js"></script>
+<script type="text/javascript" src="common_files/jquery.js"></script>
+<script type="text/javascript" src="common_files/l2on.js"></script>
+
+<script type="text/javascript" src="common_files/openapi.js"></script>
+<script type="text/javascript">VK.init({apiId: 2151119, onlyWidgets: true});</script>
+
+
+</head><body style="min-width: 1000px;">
+
+<!-- showMessage -->
+<div id="l2on-notify" style="display: none; z-index: 1000;"><div id="l2on-notify-text" style="float: right; margin: 10px; background-color: rgb(204, 204, 204); width: 350px; padding: 15px; color: rgb(255, 255, 255);"></div></div>
+<!-- showBigImage -->
+<div id="faded-screen" onclick="hideBigImage();"></div><div id="big-image-display" onclick="hideBigImage();"><table style="width: 100%; height: 100%;"><tbody><tr><td align="center"><div id="big-image-container" onclick="return false;"></div></td></tr></tbody></table></div>
+
+<div class="page-main">
+<table style="width: 100%; table-layout: fixed;">
+<tbody><tr><td style="padding: 0px 10px;">
+<table style="width: 100%; table-layout: fixed;">
+<tbody><tr><td style="padding: 5px;">
+<table class="inv">
+<tbody><tr><td style="padding-right: 2em;"><a href="http://l2on.ru/"><img src="common_files/l2on.jpg" alt="L2on.ru" border="0" height="60" width="200"></a></td><td><iframe class=" rccjlujxoynejxslaxxy" src="common_files/a.htm" frameborder="0" height="60" scrolling="no" width="468"></iframe></td></tr>
+</tbody></table>
+</td><td class="user-controls" style="padding: 5px;" width="240">
+<a href="http://heaven7.l2on.ru/" class="user">heaven7</a> ( <a href="http://l2on.ru/?c=entry&amp;a=logout">выйти</a> )<br>
+<a href="http://l2on.ru/?c=cp">кабинет</a><br>
+Баланс: 177 монет ( <a href="http://l2on.ru/?c=pay">пополнить</a> )
+</td></tr>
+<tr><td style="padding: 5px;" valign="top">
+<table id="table-menu">
+<tbody><tr>
+<td class="default first"><a href="http://l2on.ru/">Онлайн</a></td>
+<td class="default"><a href="http://l2on.ru/?c=map">Карта</a></td>
+<td class="default"><a href="http://l2on.ru/?c=market">Рынок</a></td>
+<td class="default"><a href="http://l2on.ru/?c=npcdata" title="NPC, мобы, дроп и спойл">NPC</a></td>
+<td class="default"><a href="http://l2on.ru/?c=items">Предметы</a></td>
+<td class="selected"><a href="http://l2on.ru/?c=userdata">Люди</a></td>
+<td class="default"><a href="http://l2on.ru/?c=comments">Общение</a></td>
+<td class="default"><a href="http://l2on.ru/?c=help">FAQ</a></td>
+<td class="default last"><a href="http://l2on.ru/?c=incentive" style="color: rgb(238, 0, 0);">Акции</a></td>
+</tr>
+</tbody></table>
+<div>
+<table id="table-submenu">
+<tbody><tr><td class="default first"><a href="http://l2on.ru/?c=userdata">Поиск</a></td>
+<td class="default"><a href="http://l2on.ru/?c=userdata&amp;a=pledge">Top&nbsp;50&nbsp;кланов</a></td>
+<td class="default"><a href="http://l2on.ru/?c=userdata&amp;a=castle">Замки</a></td>
+<td class="default"><a href="http://l2on.ru/?c=userdata&amp;a=fort">Крепости</a></td>
+<td class="default"><a href="http://l2on.ru/?c=userdata&amp;a=agit">Холлы</a></td>
+<td class="default"><a href="http://l2on.ru/?c=userdata&amp;a=noble">Дворяне</a></td>
+<td class="default last"><a href="http://l2on.ru/?c=userdata&amp;a=inf&amp;hero=2">Герои</a></td>
+</tr></tbody></table>
+</div>
+</td><td style="padding: 5px;" valign="top">
+<table class="server-select" height="100%" width="100%">
+<tbody><tr>
+<td class="label">Сервер:</td><td width="100%">
+<select size="1" id="setworld-field" name="setworld-field" onchange="window.location.href='/?c=userdata&amp;a=pledge&amp;id=118983&amp;pay=ef5&amp;setworld='+document.getElementById('setworld-field').value;">
+<option value="43">Cadmus</option><option value="44">Athebaldt</option><option value="45">Blackbird</option><option value="46">Ramsheart</option><option value="47">Esthus</option><option value="48">Vasper</option><option value="49">Lancer</option><option value="51">Waytrel</option><option value="61">Desperion</option><option value="64">Faris</option><option value="22">Atlant</option><option selected="selected" value="13">Airin</option><option value="60">Van Holter</option></select>
+</td>
+</tr>
+</tbody></table>
+</td></tr>
+<tr><td style="padding: 1em 2em 5px 5px;" valign="top">
+
+
+<div id="content">
+<!-- HEADER -->
+<style type="text/css">
+.clan-title {float: left;}
+.clan-like {float: left; padding-left: 7em;}
+</style>
+
+<div class="clan-header">
+<h1 class="clan-title">Клан <img src="common_files/24248.png" class="acrest"><img src="common_files/35912.png" class="pcrest"> ХРАНИТЕЛИ (Airin) <span style="color: rgb(170, 170, 170);">—</span>
+<a href="http://l2on.ru/?c=comments&amp;id=8648">251 комментарий</a></h1>
+<div class="clan-like"><div style="width: 100px; background: none repeat scroll 0% 0% transparent; height: 22px; position: relative; clear: both;" id="vk_like"><iframe id="vkwidget1" src="common_files/widget_like.htm" style="height: 22px; width: 100px; overflow: hidden; z-index: 150;" name="fXD645f6" frameborder="0" height="22px" scrolling="no" width="100%"></iframe></div></div>
+<script type="text/javascript">
+VK.Widgets.Like("vk_like", {type: "mini", pageTitle: 'Клан ХРАНИТЕЛИ на сервере Airin'});
+</script>
+<div style="clear: both;"></div>
+</div>
+
+<script type="text/javascript">
+var clan_id = 118983;
+</script>
+
+<h2><a href="http://l2on.ru/?c=userdata&amp;a=pledge">Top 50</a>: 3 место <span class="add">(рейтинг: 2139)</span></h2>
+
+
+<table class="values">
+
+<tbody><tr><td class="caption">Ссылка:</td><td>
+
+<a href="http://l2on.ru/?c=help&amp;topic=clanpage">адрес не указан</a>
+</td></tr>
+
+<tr><td class="caption">Лидер:</td><td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=917591">ГЛЮКИ</a></td></tr>
+
+<tr><td class="caption">Персонажей:</td><td>127  <span class="add">(126 с третьей профессией и 102 дворянина)</span></td></tr>
+<tr><td class="caption">Текучка:</td><td>за последнюю неделю <b><font color="#00aa00">35</font></b> персонажей вступило в клан и <b><font color="#ff0000">50</font></b> покинуло <span class="add">(<a href="http://l2on.ru/?c=userdata&amp;a=pledge&amp;id=118983&amp;history=7">история</a>)</span></td></tr>
+
+<tr><td class="caption">Альянс:</td><td><a href="http://l2on.ru/?c=userdata&amp;a=ally&amp;id=7207">SpaceEnergy</a></td></tr>
+
+<tr><td class="caption"><a href="http://l2on.ru/?c=userdata&amp;a=agit">Холл</a>:</td><td>Серебряный Зал <span class="add">(<a href="http://l2on.ru/?c=map&amp;t=agit&amp;id=37">Аден</a>)</span></td></tr>
+<tr><td class="caption"><a href="http://l2on.ru/?c=userdata&amp;a=castle">Замок</a>:</td><td><a href="http://l2on.ru/?c=userdata&amp;a=castle&amp;id=9">Замок Шутгарта</a> <span class="add">(<a href="http://l2on.ru/?c=map&amp;t=castle&amp;id=9">Земли Шутгарта</a>)</span></td></tr>
+
+<tr><td class="caption">О клане:</td>
+<td>
+<div id="comment-main">
+<div id="comment-text" class="comment-ext hidden"></div>
+<div><a href="http://l2on.ru/?c=help&amp;topic=clanpage">описание отсутствует</a></div>
+</div>
+</td></tr>
+
+</tbody></table>
+
+
+<h1 class="mar">Состав <span class="add">(<a href="#" class="ajax" onclick="$('#members').toggle(); $(this).html($(this).html() == 'спрятать' ? 'показать' : 'спрятать'); return false;">спрятать</a>)</span></h1>
+<div id="members">
+<table class="tablesorter" cellspacing="1">
+<thead>
+<tr>
+<th class="header {sorter:'text'}">Имя</th>
+<th class="header {sorter:'text'}">Класс</th>
+<th class="header">Раса</th>
+<th class="header">Ур.</th>
+<th class="{sorter:'order'} header">Обновлен</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=878210" class="black">Alexisonfire</a></td>
+<td><span title="Ghost Hunter">Призрачный Охотник</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>79+</td>
+<td order="1300615492"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1136257" class="black">AlexRush</a></td>
+<td><span title="Doombringer">Каратель</span></td>
+<td><font color="#4444ee">Камаэль</font></td>
+<td>79+</td>
+<td order="1300647882"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=952370" class="black">AnaisBel</a> <span class="add">ЮиКА</span></td>
+<td><span title="MysticMuse">Магистр Магии</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>76+</td>
+<td order="1300620856"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1092412" class="black">ARMYdoctor</a></td>
+<td><span title="Cardinal">Кардинал</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300712142"><span class="add">23 часа назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=915042" class="black">ARTAVAZD</a></td>
+<td><span title="Titan">Титан</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>76+</td>
+<td order="1300638273"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=914874" class="black">BABYtuNIGHT</a></td>
+<td><span title="Storm Screamer">Повелитель Бури</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>80+</td>
+<td order="1300692503"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1021786" class="black">BehemothZombie</a></td>
+<td><span title="Dominator">Деспот</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>76+</td>
+<td order="1300740838"><span class="add">16 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=942716" class="black">BoogieVoogie</a> <span class="add">m!xed by</span></td>
+<td><span title="Spectral Dancer">Призрачный Танцор</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>76+</td>
+<td order="1300121430"><span class="add">неделю назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1078929" class="black">Calvin</a></td>
+<td><span title="Dominator">Деспот</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>79+</td>
+<td order="1300741965"><span class="add">15 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=961561" class="black">Cavel</a> <span class="add">K.haos</span></td>
+<td><span title="Doombringer">Каратель</span></td>
+<td><font color="#4444ee">Камаэль</font></td>
+<td>80+</td>
+<td order="1300636252"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1012438" class="black">CepesHVlad</a> <span class="add">Ventrue</span></td>
+<td><span title="Soultaker">Пожиратель Душ</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300638471"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1166990" class="black">Cocaina</a> <span class="add">Объебоска</span></td>
+<td><span title="Adventurer">Авантюрист</span></td>
+<td><font color="#dd44dd">Человек</font></td>
+<td>76+</td>
+<td order="1300457638"><span class="add">3 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1238773" class="black">DarkHoly</a></td>
+<td><span title="Female Soul Hound">Инквизитор</span></td>
+<td><font color="#dd44dd">Камаэль</font></td>
+<td>76+</td>
+<td order="1300653395"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=999242" class="black">DarkTear</a></td>
+<td><span title="Spectral Dancer">Призрачный Танцор</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>80+</td>
+<td order="1300639976"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=902728" class="black">Dejan</a></td>
+<td><span title="Duelist">Дуэлист</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>76+</td>
+<td order="1300614896"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1315912" class="black">DesertxD</a> <span class="add">в КП Биш 76+</span></td>
+<td><span title="EvaSaint">Жрец Евы</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>76+</td>
+<td order="1300793514"><span class="add">час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=995203" class="black">DimonTag</a></td>
+<td><span title="Soultaker">Пожиратель Душ</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300746669"><span class="add">14 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1070824" class="black">Distanse</a> <span class="add">   </span></td>
+<td><span title="Elemental Master">Мастер Стихий</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300647229"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1028536" class="black">Empulz</a> <span class="add">   [MT]</span></td>
+<td><span title="Spectral Dancer">Призрачный Танцор</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>80+</td>
+<td order="1300650655"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=882486" class="black">Farida</a></td>
+<td><span title="Hierophant">Апостол</span></td>
+<td><font color="#dd44dd">Человек</font></td>
+<td>79+</td>
+<td order="1300715229"><span class="add">23 часа назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1239850" class="black">Furan</a> <span class="add">4 yXa</span></td>
+<td><span title="SwordMuse">Виртуоз</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>76+</td>
+<td order="1300052767"><span class="add">неделю назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1175461" class="black">G0rthauer</a> <span class="add">StorM</span></td>
+<td><span title="EvaTemplar">Храмовник Евы</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300793514"><span class="add">час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=890659" class="black">graf1</a></td>
+<td><span title="EvaTemplar">Храмовник Евы</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>76+</td>
+<td order="1300723724"><span class="add">20 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=982692" class="black">GravEe</a> <span class="add">pro 150+</span></td>
+<td><span title="Adventurer">Авантюрист</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>76+</td>
+<td order="1300743237"><span class="add">15 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=921464" class="black">Gvin</a></td>
+<td><span title="Male Soul Hound">Инквизитор</span></td>
+<td><font color="#4444ee">Камаэль</font></td>
+<td>79+</td>
+<td order="1300640392"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=936353" class="black">ih8u</a> <span class="add">Du Hast</span></td>
+<td><span title="Phoenix Knight">Рыцарь Феникса</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300649818"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=949829" class="black">IMAGI</a> <span class="add">Семки есть?:)</span></td>
+<td><span title="Storm Screamer">Повелитель Бури</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>79+</td>
+<td order="1300742051"><span class="add">15 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1310513" class="black">inWhite</a> <span class="add">beef and flow</span></td>
+<td><span title="WindRider">Странник Ветра</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300793736"><span class="add">час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=956550" class="black">Jog</a> <span class="add"> </span></td>
+<td><span title="Doomcryer">Глас Судьбы</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>79+</td>
+<td order="1300203679"><span class="add">6 дней назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1183014" class="black">JohnnyUtah</a></td>
+<td><span title="Hell Knight">Рыцарь Ада</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300714275"><span class="add">23 часа назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=911591" class="black">JulioCesario</a></td>
+<td><span title="Duelist">Дуэлист</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>80+</td>
+<td order="1300634334"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1129151" class="black">kamael18</a></td>
+<td><span title="Doombringer">Каратель</span></td>
+<td><font color="#4444ee">Камаэль</font></td>
+<td>79+</td>
+<td order="1300623749"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=972625" class="black">Keman</a></td>
+<td><span title="MysticMuse">Магистр Магии</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300677705"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1308599" class="black">lllIlll</a> <span class="add">. . . . . . .</span></td>
+<td><span title="Dominator">Деспот</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>79+</td>
+<td order="1300714378"><span class="add">23 часа назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1309324" class="black">LuckyOrk</a></td>
+<td><span title="Tyrant">Отшельник</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>61+</td>
+<td order="1300643896"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=969700" class="black">m1ckey</a></td>
+<td><span title="Doomcryer">Глас Судьбы</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>79+</td>
+<td order="1300705970"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1151785" class="black">Madwyn</a></td>
+<td><span title="Cardinal">Кардинал</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300571321"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1128211" class="black">Magisters</a></td>
+<td><span title="Cardinal">Кардинал</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>76+</td>
+<td order="1300570146"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=912074" class="black">MarkGraf</a></td>
+<td><span title="Duelist">Дуэлист</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>80+</td>
+<td order="1300746382"><span class="add">14 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1141933" class="black">Micaela</a> <span class="add">[GLT]</span></td>
+<td><span title="Hierophant">Апостол</span></td>
+<td><font color="#dd44dd">Человек</font></td>
+<td>79+</td>
+<td order="1300692086"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1119859" class="black">mioki</a> <span class="add">певичко</span></td>
+<td><span title="SwordMuse">Виртуоз</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300646111"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=876002" class="black">Miraclus</a> <span class="add">86 RUS</span></td>
+<td><span title="MysticMuse">Магистр Магии</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>76+</td>
+<td order="1300714352"><span class="add">23 часа назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1162587" class="black">Mirak</a> <span class="add">{MT-TeaM}</span></td>
+<td><span title="Dominator">Деспот</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>79+</td>
+<td order="1300470094"><span class="add">3 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=956641" class="black">MissisBaffer</a></td>
+<td><span title="Shillien Saint">Жрец Шилен</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>79+</td>
+<td order="1300725167"><span class="add">20 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1161062" class="black">MysteriousIII</a> <span class="add">[MT] PL</span></td>
+<td><span title="Storm Screamer">Повелитель Бури</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>79+</td>
+<td order="1300562542"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1154785" class="black">nblca</a> <span class="add">Get Over Here!</span></td>
+<td><span title="Shillien Templar">Храмовник Шилен</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>79+</td>
+<td order="1300793736"><span class="add">час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1082830" class="black">NormanN</a></td>
+<td><span title="Archmage">Архимаг</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>80+</td>
+<td order="1300725162"><span class="add">20 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1090370" class="black">OneBlow</a></td>
+<td><span title="Adventurer">Авантюрист</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300625413"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1242930" class="black">OriginalDark</a> <span class="add">SolBG</span></td>
+<td><span title="Hell Knight">Рыцарь Ада</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300649282"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=950704" class="black">R1ses</a></td>
+<td><span title="Phoenix Knight">Рыцарь Феникса</span></td>
+<td><font color="#dd44dd">Человек</font></td>
+<td>79+</td>
+<td order="1300740736"><span class="add">16 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1003933" class="black">Reira</a> <span class="add">~Silmeria~</span></td>
+<td><span title="EvaSaint">Жрец Евы</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>76+</td>
+<td order="1300385488"><span class="add">4 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1044820" class="black">Rem1ke</a> <span class="add">XuHkaJIu</span></td>
+<td><span title="EvaSaint">Жрец Евы</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1299846641"><span class="add">неделю назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1174542" class="black">Rkaa</a> <span class="add">В кп ЛФ Бд 80+</span></td>
+<td><span title="Duelist">Дуэлист</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300727379"><span class="add">19 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1080194" class="black">Rons0n</a></td>
+<td><span title="Ghost Hunter">Призрачный Охотник</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>79+</td>
+<td order="1300571046"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1147582" class="black">RURK</a></td>
+<td><span title="Adventurer">Авантюрист</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300289579"><span class="add">5 дней назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1151720" class="black">Salvo</a></td>
+<td><span title="Doomcryer">Глас Судьбы</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>80+</td>
+<td order="1300573262"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1074724" class="black">SanneR</a> <span class="add">MT [ЭГОИСТ]</span></td>
+<td><span title="Archmage">Архимаг</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300739287"><span class="add">16 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=935773" class="black">Sha1fey</a></td>
+<td><span title="Shillien Templar">Храмовник Шилен</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>80+</td>
+<td order="1300599687"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=883145" class="black">Sir</a> <span class="add"> </span></td>
+<td><span title="Storm Screamer">Повелитель Бури</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>80+</td>
+<td order="1300720921"><span class="add">21 час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1189868" class="black">Solus</a></td>
+<td><span title="Soultaker">Пожиратель Душ</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>76+</td>
+<td order="1300554054"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1314876" class="black">Song1</a></td>
+<td><span title="SwordMuse">Виртуоз</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300742972"><span class="add">15 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1148106" class="black">SSSandra</a> <span class="add">Приморочка</span></td>
+<td><span title="SwordMuse">Виртуоз</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>76+</td>
+<td order="1300764289"><span class="add">9 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=882606" class="black">StarChild</a> <span class="add">MJ</span></td>
+<td><span title="Maestro">Мастер</span></td>
+<td><font color="#dd44dd">Гном</font></td>
+<td>76+</td>
+<td order="1300633619"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1172962" class="black">Sunbeam</a> <span class="add">[-] MT [+]</span></td>
+<td><span title="EvaSaint">Жрец Евы</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300570229"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1005691" class="black">Sune</a></td>
+<td><span title="WindRider">Странник Ветра</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300431105"><span class="add">4 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1333023" class="black">SWDm</a> <span class="add">[Brutal Team]</span></td>
+<td><span title="Cardinal">Кардинал</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>76+</td>
+<td order="1300729695"><span class="add">19 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1064085" class="black">switty163rus</a></td>
+<td><span title="Maestro">Мастер</span></td>
+<td><font color="#dd44dd">Гном</font></td>
+<td>76+</td>
+<td order="1300694300"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1086873" class="black">TaHaToc</a></td>
+<td><span title="Spectral Dancer">Призрачный Танцор</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>79+</td>
+<td order="1300689825"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1162910" class="black">TcA</a> <span class="add">Викинг </span></td>
+<td><span title="Phoenix Knight">Рыцарь Феникса</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300743060"><span class="add">15 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=942766" class="black">TiGG</a> <span class="add">в кп бп свс 80+</span></td>
+<td><span title="Doombringer">Каратель</span></td>
+<td><font color="#4444ee">Камаэль</font></td>
+<td>79+</td>
+<td order="1300790381"><span class="add">2 часа назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=994641" class="black">tushkan4ik</a></td>
+<td><span title="Doombringer">Каратель</span></td>
+<td><font color="#4444ee">Камаэль</font></td>
+<td>80+</td>
+<td order="1300633523"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1056239" class="black">UnHolly</a></td>
+<td><span title="Shillien Saint">Жрец Шилен</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>76+</td>
+<td order="1300605340"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1118425" class="black">Univox</a> <span class="add">Aggressive</span></td>
+<td><span title="Dominator">Деспот</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>76+</td>
+<td order="1300629164"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=996079" class="black">UnstoppableBlow</a></td>
+<td><span title="Adventurer">Авантюрист</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>76+</td>
+<td order="1300625665"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1374057" class="black">ValakasKalitka</a></td>
+<td><span title="Ghost Sentinel">Страж Теней</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>76+</td>
+<td order="1300793736"><span class="add">час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1315795" class="black">VitaBrevis</a></td>
+<td><span title="Cardinal">Кардинал</span></td>
+<td><font color="#dd44dd">Человек</font></td>
+<td>79+</td>
+<td order="1300623025"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=886126" class="black">Vladislav</a> <span class="add">Silvin</span></td>
+<td><span title="Hierophant">Апостол</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300718638"><span class="add">22 часа назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1063941" class="black">WindofChanges</a></td>
+<td><span title="Cardinal">Кардинал</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300647456"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=879667" class="black">WindRider</a></td>
+<td><span title="WindRider">Странник Ветра</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300615395"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1070605" class="black">xCalvinKleiNx</a></td>
+<td><span title="Spectral Dancer">Призрачный Танцор</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>80+</td>
+<td order="1300714282"><span class="add">23 часа назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1045988" class="black">xFastx</a></td>
+<td><span title="Cardinal">Кардинал</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300624395"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1268425" class="black">xxxRASTAFARIxxx</a></td>
+<td><span title="SwordMuse">Виртуоз</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>76+</td>
+<td order="1300714403"><span class="add">23 часа назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1134636" class="black">Айб</a> <span class="add">{Шоколад} [Team]</span></td>
+<td><span title="EvaSaint">Жрец Евы</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300639873"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1072318" class="black">АльфаДог</a></td>
+<td><span title="Spectral Dancer">Призрачный Танцор</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>76+</td>
+<td order="1300383228"><span class="add">4 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1151860" class="black">Арманыч</a> <span class="add">[Дуримар]</span></td>
+<td><span title="Spectral Dancer">Призрачный Танцор</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>80+</td>
+<td order="1300642760"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=879933" class="black">Арнаэра</a></td>
+<td><span title="SwordMuse">Виртуоз</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300651968"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=933593" class="black">АцкИйКамаЭльКо</a></td>
+<td><span title="Doombringer">Каратель</span></td>
+<td><font color="#4444ee">Камаэль</font></td>
+<td>76+</td>
+<td order="1300642403"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=916886" class="black">АццкийНож</a></td>
+<td><span title="Adventurer">Авантюрист</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>80+</td>
+<td order="1300742562"><span class="add">15 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1055485" class="black">Выключатель</a></td>
+<td><span title="Storm Screamer">Повелитель Бури</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>76+</td>
+<td order="1300730215"><span class="add">18 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1177534" class="black">ГанстаБОРЩ</a></td>
+<td><span title="Dreadnought">Полководец</span></td>
+<td><font color="#dd44dd">Человек</font></td>
+<td>80+</td>
+<td order="1300672785"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=917591" class="black">ГЛЮКИ</a></td>
+<td><span title="Dominator">Деспот</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>79+</td>
+<td order="1300722341"><span class="add">21 час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=897323" class="black">Дахак</a> <span class="add">   </span></td>
+<td><span title="Hell Knight">Рыцарь Ада</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300651664"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=888458" class="black">Кьяра</a> <span class="add">Рыжик</span></td>
+<td><span title="EvaSaint">Жрец Евы</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300302810"><span class="add">5 дней назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1017166" class="black">Лармион</a> <span class="add">Против ветра!</span></td>
+<td><span title="Storm Screamer">Повелитель Бури</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>79+</td>
+<td order="1300532683"><span class="add">3 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1316191" class="black">ЛасковаяУбийца</a></td>
+<td><span title="Spectral Dancer">Призрачный Танцор</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>79+</td>
+<td order="1300643877"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1112466" class="black">ЛейШЕ</a></td>
+<td><span title="Shillien Saint">Жрец Шилен</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>76+</td>
+<td order="1300608622"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1188786" class="black">ЛысыйНянь</a> <span class="add">ТракТиръ</span></td>
+<td><span title="Grand Khauatari">Аватар</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>79+</td>
+<td order="1300456574"><span class="add">3 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=940082" class="black">Ману</a> <span class="add">В КП СВС БП 80+</span></td>
+<td><span title="Grand Khauatari">Аватар</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>80+</td>
+<td order="1300793736"><span class="add">час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1032664" class="black">Мелани</a></td>
+<td><span title="Shillien Saint">Жрец Шилен</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>79+</td>
+<td order="1300733221"><span class="add">18 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=967876" class="black">МиссПоли</a></td>
+<td><span title="EvaSaint">Жрец Евы</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300558850"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1056641" class="black">МуМ</a> <span class="add">WTB Дестино диад</span></td>
+<td><span title="MysticMuse">Магистр Магии</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300728619"><span class="add">19 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=900429" class="black">Мурзик</a></td>
+<td><span title="ArcanaLord">Чернокнижник</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300203510"><span class="add">6 дней назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1360332" class="black">Мухабат</a></td>
+<td><span title="Dominator">Деспот</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>76+</td>
+<td order="1300729348"><span class="add">19 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1321990" class="black">Нервная</a> <span class="add">[Brutal Team]</span></td>
+<td><span title="Spectral Dancer">Призрачный Танцор</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>76+</td>
+<td order="1300729729"><span class="add">19 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1206055" class="black">НИграммаСИЛИКОНА</a></td>
+<td><span title="Shillien Saint">Жрец Шилен</span></td>
+<td><font color="#dd44dd">Тёмный эльф</font></td>
+<td>76+</td>
+<td order="1300733151"><span class="add">18 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=906644" class="black">НочнаяТень</a> <span class="add">7</span></td>
+<td><span title="Soultaker">Пожиратель Душ</span></td>
+<td><font color="#dd44dd">Человек</font></td>
+<td>79+</td>
+<td order="1300616241"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1014280" class="black">НочнаяФурия</a></td>
+<td><span title="Hell Knight">Рыцарь Ада</span></td>
+<td><font color="#dd44dd">Человек</font></td>
+<td>79+</td>
+<td order="1300720803"><span class="add">21 час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=967718" class="black">Овен</a> <span class="add">Очень Мертвый</span></td>
+<td><span title="Shillien Saint">Жрец Шилен</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>76+</td>
+<td order="1300089845"><span class="add">неделю назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1116980" class="black">плэк</a></td>
+<td><span title="Male Soul Hound">Инквизитор</span></td>
+<td><font color="#4444ee">Камаэль</font></td>
+<td>80+</td>
+<td order="1300722089"><span class="add">21 час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1259456" class="black">Премка</a> <span class="add">StorM</span></td>
+<td><span title="Fortune Seeker">Кладоискатель</span></td>
+<td><font color="#dd44dd">Гном</font></td>
+<td>79+</td>
+<td order="1300747872"><span class="add">14 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1252342" class="black">Рюдзи</a></td>
+<td><span title="EvaSaint">Жрец Евы</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>76+</td>
+<td order="1300633412"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=894641" class="black">Симпатико</a></td>
+<td><span title="EvaSaint">Жрец Евы</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300343180"><span class="add">5 дней назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1356419" class="black">Союзмультфильм</a></td>
+<td><span title="Titan">Титан</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>76+</td>
+<td order="1300633339"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1120045" class="black">СТРИПТЕЗЕР</a></td>
+<td><span title="Spectral Dancer">Призрачный Танцор</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>76+</td>
+<td order="1300744451"><span class="add">14 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1128008" class="black">Тисанычь</a></td>
+<td><span title="Doombringer">Каратель</span></td>
+<td><font color="#4444ee">Камаэль</font></td>
+<td>76+</td>
+<td order="1300555102"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1120377" class="black">Турист1989</a></td>
+<td><span title="Shillien Templar">Храмовник Шилен</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>80+</td>
+<td order="1300715237"><span class="add">23 часа назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1152105" class="black">УйПопадешь</a> <span class="add">IIeJIeMeHb</span></td>
+<td><span title="Cardinal">Кардинал</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>79+</td>
+<td order="1300471275"><span class="add">3 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1187433" class="black">Форик</a> <span class="add">ШКОЛОТА</span></td>
+<td><span title="Grand Khauatari">Аватар</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>79+</td>
+<td order="1300792770"><span class="add">час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1121566" class="black">ХЕЛЛБОЙ</a> <span class="add">3</span></td>
+<td><span title="Grand Khauatari">Аватар</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>80+</td>
+<td order="1300645358"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1139066" class="black">хКрейзих</a> <span class="add">*БАНДИТ-КА*</span></td>
+<td><span title="Maestro">Мастер</span></td>
+<td><font color="#dd44dd">Гном</font></td>
+<td>79+</td>
+<td order="1300647488"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=884681" class="black">хСТЕПЫЧх</a></td>
+<td><span title="Adventurer">Авантюрист</span></td>
+<td><font color="#4444ee">Человек</font></td>
+<td>80+</td>
+<td order="1300624164"><span class="add">2 дня назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=888319" class="black">Шеррит</a></td>
+<td><span title="Hell Knight">Рыцарь Ада</span></td>
+<td><font color="#dd44dd">Человек</font></td>
+<td>79+</td>
+<td order="1300302798"><span class="add">5 дней назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1048633" class="black">Эльрик</a> <span class="add">Of Melnibone'</span></td>
+<td><span title="Storm Screamer">Повелитель Бури</span></td>
+<td><font color="#4444ee">Тёмный эльф</font></td>
+<td>76+</td>
+<td order="1300677167"><span class="add">день назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1165612" class="black">Этгар</a></td>
+<td><span title="MysticMuse">Магистр Магии</span></td>
+<td><font color="#4444ee">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300723921"><span class="add">20 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=944447" class="black">Юлика</a> <span class="add">НЯШКА</span></td>
+<td><span title="EvaSaint">Жрец Евы</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300730972"><span class="add">18 часов назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1082109" class="black">Ям</a> <span class="add">ушол на работу(</span></td>
+<td><span title="Doomcryer">Глас Судьбы</span></td>
+<td><font color="#4444ee">Орк</font></td>
+<td>79+</td>
+<td order="1300793514"><span class="add">час назад</span></td>
+</tr>
+
+
+<tr>
+<td><a href="http://l2on.ru/?c=userdata&amp;a=char&amp;id=1152446" class="black">Ятрогения</a></td>
+<td><span title="EvaSaint">Жрец Евы</span></td>
+<td><font color="#dd44dd">Светлый эльф</font></td>
+<td>79+</td>
+<td order="1300648795"><span class="add">день назад</span></td>
+</tr>
+
+
+</tbody>
+</table>
+</div>
+
+<h1 class="mar">Статистика по профессиям <span class="add">(<a href="#" class="ajax" onclick="$('#classes').toggle(); $(this).html($(this).html() == 'спрятать' ? 'показать' : 'спрятать'); return false;">спрятать</a>)</span></h1>
+<div id="classes" style="">
+<style>
+TABLE.classes TD {padding: 0.2em 0;}
+TABLE.classes TD.count {text-align: right; padding-left: 1em;}
+</style>
+
+
+<h2 class="mar">Вторые профессии <span class="add">(1 персонаж)</span></h2>
+<table class="classes">
+<tbody><tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=48">Отшельник</a> <span class="add">(Tyrant)</span></td><td class="count">1</td></tr>
+</tbody></table>
+
+
+<h2 class="mar">Третьи профессии <span class="add">(126 персонажей)</span></h2>
+<table class="classes">
+<tbody><tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=105">Жрец Евы</a> <span class="add">(EvaSaint)</span></td><td class="count">11</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=107">Призрачный Танцор</a> <span class="add">(Spectral Dancer)</span></td><td class="count">10</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=97">Кардинал</a> <span class="add">(Cardinal)</span></td><td class="count">8</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=131">Каратель</a> <span class="add">(Doombringer)</span></td><td class="count">7</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=115">Деспот</a> <span class="add">(Dominator)</span></td><td class="count">7</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=110">Повелитель Бури</a> <span class="add">(Storm Screamer)</span></td><td class="count">7</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=93">Авантюрист</a> <span class="add">(Adventurer)</span></td><td class="count">7</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=112">Жрец Шилен</a> <span class="add">(Shillien Saint)</span></td><td class="count">6</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=100">Виртуоз</a> <span class="add">(SwordMuse)</span></td><td class="count">6</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=91">Рыцарь Ада</a> <span class="add">(Hell Knight)</span></td><td class="count">5</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=103">Магистр Магии</a> <span class="add">(MysticMuse)</span></td><td class="count">5</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=114">Аватар</a> <span class="add">(Grand Khauatari)</span></td><td class="count">4</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=95">Пожиратель Душ</a> <span class="add">(Soultaker)</span></td><td class="count">4</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=116">Глас Судьбы</a> <span class="add">(Doomcryer)</span></td><td class="count">4</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=88">Дуэлист</a> <span class="add">(Duelist)</span></td><td class="count">4</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=98">Апостол</a> <span class="add">(Hierophant)</span></td><td class="count">3</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=106">Храмовник Шилен</a> <span class="add">(Shillien Templar)</span></td><td class="count">3</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=118">Мастер</a> <span class="add">(Maestro)</span></td><td class="count">3</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=101">Странник Ветра</a> <span class="add">(WindRider)</span></td><td class="count">3</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=90">Рыцарь Феникса</a> <span class="add">(Phoenix Knight)</span></td><td class="count">3</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=108">Призрачный Охотник</a> <span class="add">(Ghost Hunter)</span></td><td class="count">2</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=94">Архимаг</a> <span class="add">(Archmage)</span></td><td class="count">2</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=99">Храмовник Евы</a> <span class="add">(EvaTemplar)</span></td><td class="count">2</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=132">Инквизитор</a> <span class="add">(Male Soul Hound)</span></td><td class="count">2</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=113">Титан</a> <span class="add">(Titan)</span></td><td class="count">2</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=96">Чернокнижник</a> <span class="add">(ArcanaLord)</span></td><td class="count">1</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=117">Кладоискатель</a> <span class="add">(Fortune Seeker)</span></td><td class="count">1</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=133">Инквизитор</a> <span class="add">(Female Soul Hound)</span></td><td class="count">1</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=104">Мастер Стихий</a> <span class="add">(Elemental Master)</span></td><td class="count">1</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=109">Страж Теней</a> <span class="add">(Ghost Sentinel)</span></td><td class="count">1</td></tr>
+<tr><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=89">Полководец</a> <span class="add">(Dreadnought)</span></td><td class="count">1</td></tr>
+</tbody></table>
+
+
+</div>
+
+
+<!-- FOOTER -->
+</div>
+</td>
+<td style="padding: 1em 5px 5px;" valign="top"><iframe class=" rccjlujxoynejxslaxxy" src="common_files/a_002.htm" frameborder="0" height="400" scrolling="no" width="240"></iframe></td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+<div class="hFooter"></div>
+</div>
+<div class="page-footer">
+<table class="inv" height="100%" width="100%">
+<tbody><tr><td style="padding: 10px;" valign="bottom">
+<div id="footer" style="border-top: 1px solid rgb(221, 221, 221); padding-top: 20px;">
+<table class="inv" width="100%">
+<tbody><tr><td>
+<span style="color: rgb(119, 119, 119);">©&nbsp;2009–2011&nbsp;«L2on.ru»</span>
+<span style="margin-left: 30px;"><a href="http://l2on.ru/?c=help">Помощь</a></span>
+<span style="margin-left: 15px;"><a href="http://l2on.ru/?c=adv">Реклама</a></span>
+<span style="margin-left: 15px; color: rgb(119, 119, 119);">Обратная связь: <a href="mailto:a@l2on.ru">a@l2on.ru</a></span>
+</td><td align="right">
+<style type="text/css">
+.faded-banner IMG {opacity:0.7; -moz-opacity:0.7; filter:alpha(opacity=70);}
+.faded-banner IMG:hover {opacity:1.0; -moz-opacity:1.0; filter:alpha(opacity=100);}
+</style>
+<!--<span style="margin-right: 2em;" class="faded-banner"><a href="http://gamermedia.ru/index.php?page=l2on"><img src="/img/gamermedia.png" border="0" width="163" height="31" alt="GamerMedia"></a></span>-->
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t14.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><a href="http://www.liveinternet.ru/click" target="_blank"><img src="common_files/hit.gif" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" border="0" height="31" width="88"></a><!--/LiveInternet-->
+
+</td>
+</tr>
+</tbody></table>
+</div>
+</td></tr>
+</tbody></table>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="common_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7038791-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body></html>

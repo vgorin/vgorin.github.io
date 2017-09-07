@@ -1,0 +1,4 @@
+autoplay=0
+autoload=1
+showslider=0
+width=26

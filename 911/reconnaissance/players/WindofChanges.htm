@@ -1,0 +1,428 @@
+<html><head>
+
+<title>Дворянин WindofChanges / L2on.ru</title>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251">
+<meta http-equiv="content-language" content="ru">
+<meta http-equiv="Pragma" content="no-cache">
+
+
+<link href="common_files/main.css" rel="stylesheet" media="all">
+<link href="common_files/jquery.css" rel="stylesheet" media="all">
+<link href="common_files/jquery-ui-1.css" rel="stylesheet" media="all">
+<script type="text/javascript" src="common_files/jquery-1.js"></script>
+<script type="text/javascript" src="common_files/jquery_005.js"></script>
+<script type="text/javascript" src="common_files/jquery.js"></script>
+<script type="text/javascript" src="common_files/jquery_006.js"></script>
+<script type="text/javascript" src="common_files/jquery_002.js"></script>
+<script type="text/javascript" src="common_files/jquery_004.js"></script>
+<script type="text/javascript" src="common_files/tablesorter.js"></script>
+<script type="text/javascript" src="common_files/jquery-ui-1.js"></script>
+<script type="text/javascript" src="common_files/jquery_003.js"></script>
+<script type="text/javascript" src="common_files/l2on.js"></script>
+
+<script type="text/javascript" src="common_files/openapi.js"></script>
+<script type="text/javascript">VK.init({apiId: 2151119, onlyWidgets: true});</script>
+
+
+</head><body style="min-width: 1000px;">
+
+<!-- showMessage -->
+<div id="l2on-notify" style="display: none; z-index: 1000;"><div id="l2on-notify-text" style="float: right; margin: 10px; background-color: rgb(204, 204, 204); width: 350px; padding: 15px; color: rgb(255, 255, 255);"></div></div>
+<!-- showBigImage -->
+<div id="faded-screen" onclick="hideBigImage();"></div><div id="big-image-display" onclick="hideBigImage();"><table style="width: 100%; height: 100%;"><tbody><tr><td align="center"><div id="big-image-container" onclick="return false;"></div></td></tr></tbody></table></div>
+
+<div class="page-main">
+<table style="width: 100%; table-layout: fixed;">
+<tbody><tr><td style="padding: 0px 10px;">
+<table style="width: 100%; table-layout: fixed;">
+<tbody><tr><td style="padding: 5px;">
+<table class="inv">
+<tbody><tr><td style="padding-right: 2em;"><a href="http://l2on.ru/"><img src="common_files/l2on.jpg" alt="L2on.ru" border="0" height="60" width="200"></a></td><td><iframe class=" eucszfptufqdrtrqnhrv" src="common_files/a.htm" frameborder="0" height="60" scrolling="no" width="468"></iframe></td></tr>
+</tbody></table>
+</td><td class="user-controls" style="padding: 5px;" width="240">
+<a href="http://heaven7.l2on.ru/" class="user">heaven7</a> ( <a href="http://l2on.ru/?c=entry&amp;a=logout">выйти</a> )<br>
+<a href="http://l2on.ru/?c=cp">кабинет</a><br>
+Баланс: 1070 монет ( <a href="http://l2on.ru/?c=pay">пополнить</a> )
+</td></tr>
+<tr><td style="padding: 5px;" valign="top">
+<table id="table-menu">
+<tbody><tr>
+<td class="default first"><a href="http://l2on.ru/">Онлайн</a></td>
+<td class="default"><a href="http://l2on.ru/?c=map">Карта</a></td>
+<td class="default"><a href="http://l2on.ru/?c=market">Рынок</a></td>
+<td class="default"><a href="http://l2on.ru/?c=npcdata" title="NPC, мобы, дроп и спойл">NPC</a></td>
+<td class="default"><a href="http://l2on.ru/?c=items">Предметы</a></td>
+<td class="selected"><a href="http://l2on.ru/?c=userdata">Люди</a></td>
+<td class="default"><a href="http://l2on.ru/?c=comments">Общение</a></td>
+<td class="default"><a href="http://l2on.ru/?c=help">FAQ</a></td>
+<td class="default last"><a href="http://l2on.ru/?c=incentive" style="color: rgb(238, 0, 0);">Акции</a></td>
+</tr>
+</tbody></table>
+<div>
+<table id="table-submenu">
+<tbody><tr><td class="default first"><a href="http://l2on.ru/?c=userdata">Поиск</a></td>
+<td class="default"><a href="http://l2on.ru/?c=userdata&amp;a=pledge">Top&nbsp;50&nbsp;кланов</a></td>
+<td class="default"><a href="http://l2on.ru/?c=userdata&amp;a=castle">Замки</a></td>
+<td class="default"><a href="http://l2on.ru/?c=userdata&amp;a=fort">Крепости</a></td>
+<td class="default"><a href="http://l2on.ru/?c=userdata&amp;a=agit">Холлы</a></td>
+<td class="default"><a href="http://l2on.ru/?c=userdata&amp;a=noble">Дворяне</a></td>
+<td class="default last"><a href="http://l2on.ru/?c=userdata&amp;a=inf&amp;hero=2">Герои</a></td>
+</tr></tbody></table>
+</div>
+</td><td style="padding: 5px;" valign="top">
+<table class="server-select" height="100%" width="100%">
+<tbody><tr>
+<td class="label">Сервер:</td><td width="100%">
+<select size="1" id="setworld-field" name="setworld-field" onchange="window.location.href='/?c=userdata&amp;a=char&amp;id=1063941&amp;pay=ef5&amp;setworld='+document.getElementById('setworld-field').value;">
+<option value="43">Cadmus</option><option value="44">Athebaldt</option><option value="45">Blackbird</option><option value="46">Ramsheart</option><option value="47">Esthus</option><option value="48">Vasper</option><option value="49">Lancer</option><option value="51">Waytrel</option><option value="61">Desperion</option><option value="64">Faris</option><option value="22">Atlant</option><option selected="selected" value="13">Airin</option><option value="60">Van Holter</option></select>
+</td>
+</tr>
+</tbody></table>
+</td></tr>
+<tr><td style="padding: 1em 2em 5px 5px;" valign="top">
+
+
+<div id="content">
+<!-- HEADER -->
+
+<script src="common_files/iteminfo.js"></script>
+<style>
+TABLE.set-items {padding: 0; margin: 1em 0 0 0; border-collapse: collapse;}
+TABLE.set-items TD {padding: 0.3em 1em 0.3em 0;}
+TABLE.char-head {padding: 0; margin: 0;}
+TABLE.char-head TD {padding: 0; margin: 0;}
+#hide-link {display: block; width: 32px; height: 32px; outline: none;}
+#hide-link, #hide-link.unhide:hover {text-decoration: none; background-image: url("/img/privacy_off.gif");}
+#hide-link:hover, #hide-link.unhide {text-decoration: none; background-image: url("/img/privacy.gif");}
+</style>
+<script type="text/javascript">
+function toggleHide(id)
+{
+   var hide = $('#hide-link').hasClass("unhide") ? 0 : 1;
+   $.post('/?c=userdata&a=hideChar', {"id": id, "hide": hide}, onToggleHideResult, "json");
+}
+
+function onToggleHideResult(data)
+{
+   if (!data.error)
+   {
+      var obj = $('#hide-link');
+      if (data.hidden)
+      {
+         obj.addClass("unhide");
+         obj.attr({title:"открыть доступ к информации"});
+         showMessage('Информация скрыта!');
+      }
+      else
+      {
+         obj.removeClass("unhide");
+         obj.attr({title:"закрыть доступ к информации"});
+         showMessage('Доступ к информации открыт!');
+      }
+   }
+   else
+   {
+      showMessage(data.msg ? data.msg : "Ошибка.", true);
+   }
+}
+
+$(document).ready(function(){$.preloadImages('/img/privacy.gif', '/img/privacy_off.gif')});
+</script>
+
+
+
+<table class="char-head">
+<tbody><tr>
+<td valign="top">
+<h1>Дворянин WindofChanges <span class="add">{Шоколад} [Team]</span> (Airin)</h1>
+</td>
+<td style="padding-left: 1em;" valign="top">
+<a id="hide-link" class="hide" href="#" onclick="toggleHide(1063941); return false;" title="закрыть доступ к информации"></a>
+</td>
+</tr>
+</tbody></table>
+
+
+<table class="values">
+<tbody><tr><td class="caption">Замечен:</td><td>25 августа 2010 <span class="add">(7 месяцев назад)</span></td></tr>
+<tr><td class="caption">Обновлён:</td><td>2 апреля в 23:03 <span class="add">(день назад)</span></td></tr>
+<tr><td class="caption">Раса:</td><td>человек <span class="add">(мужской пол)</span></td></tr>
+<tr><td class="caption">Уровень:</td><td>79<span class="add">+</span>
+… или 80<span class="add">+</span>, судя по амуниции
+</td>
+</tr>
+<tr><td class="caption">Класс:</td><td><a href="http://l2on.ru/?c=userdata&amp;a=class&amp;id=97">кардинал</a> <span class="add">(cardinal)</span></td></tr>
+
+<tr><td class="caption">Сабкласс:</td><td>танцор смерти <span class="add">(bladedancer)</span></td></tr>
+
+<tr><td class="caption">Клан:</td><td><img src="common_files/24248.png" class="acrest"><img src="common_files/35912.png" class="pcrest"> <a href="http://l2on.ru/?c=userdata&amp;a=pledge&amp;id=118983">ХРАНИТЕЛИ</a> <span class="add">(вступил не позднее 6 марта)</span></td></tr>
+
+<tr><td class="caption">Альянс:</td><td><a href="http://l2on.ru/?c=userdata&amp;a=ally&amp;id=7207">SpaceEnergy</a></td></tr>
+
+<tr><td class="caption">Торговля:</td><td>
+на рынке не замечен
+</td></tr>
+</tbody></table>
+
+<h2 class="mar" id="clans">История</h2>
+
+
+<div style="line-height: 170%;">
+<img src="common_files/47568.png" class="pcrest">&nbsp;<a href="http://l2on.ru/?c=userdata&amp;a=pledge&amp;id=131946">MagiCAffaiR</a> <span class="add">—</span> с 27 августа 2010 по 15 декабря 2010 <span class="add">(110 дней)</span><br>
+<img src="common_files/41891.png" class="pcrest">&nbsp;<a href="http://l2on.ru/?c=userdata&amp;a=pledge&amp;id=120626">ALKAPONE</a> <span class="add">—</span> с 20 декабря 2010 по 3 января <span class="add">(14 дней)</span><br>
+<img src="common_files/47568.png" class="pcrest">&nbsp;<a href="http://l2on.ru/?c=userdata&amp;a=pledge&amp;id=131946">MagiCAffaiR</a> <span class="add">—</span> с 5 января по 2 марта <span class="add">(56 дней)</span><br>
+</div>
+
+
+
+<h2 class="mar" id="gear">Амуниция</h2>
+
+<div class="gear-set">
+Комплект замечен 9 раз (обновлён день назад)
+<table class="set-items">
+<tbody>
+<tr>
+<td><img src="common_files/etc_shirts_c_i02.png" class="item-icon"></td>
+<td iteminfo="10493">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=10493" class="black">Шелковая Рубаха</a> <span class="add">CP</span></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_circlet_i00.png" class="item-icon"></td>
+<td iteminfo="15608">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=15608" class="black">Диадема Дестино</a></td>
+</tr>
+<tr>
+<td><img src="common_files/weapon_arcana_mace_i01.png" class="item-icon"></td>
+<td iteminfo="11223">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=11223" class="black">Посох Тайн - Природа</a> <span class="add">Проницательность</span></td>
+</tr>
+<tr>
+<td><img src="common_files/weapon_tysandy_sigil_i01.png" class="item-icon"></td>
+<td iteminfo="15622">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=15622" class="black">Символ Дестино</a></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_t102_g_i00.png" class="item-icon"></td>
+<td iteminfo="15617">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=15617" class="black">Перчатки Дестино</a></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_t102_u_i00.png" class="item-icon"></td>
+<td iteminfo="15611">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=15611" class="black">Туника Дестино</a></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_t102_l_i00.png" class="item-icon"></td>
+<td iteminfo="15614">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=15614" class="black">Штаны Дестино</a></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_t102_b_i00.png" class="item-icon"></td>
+<td iteminfo="15620">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=15620" class="black">Ботинки Дестино</a></td>
+</tr>
+<tr>
+<td><img src="common_files/accessary_healer_circlet_i00.png" class="item-icon"></td>
+<td iteminfo="9405">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=9405" class="black">Диадема Целителя</a></td>
+</tr>
+<tr>
+<td><img src="common_files/etc_rbracelet_c_i00.png" class="item-icon"></td>
+<td iteminfo="13295">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=13295" class="black">Браслет Пайлаки</a></td>
+</tr>
+<tr>
+<td><img src="common_files/etc_rbracelet_aga_agit_i00.png" class="item-icon"></td>
+<td iteminfo="20030">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=20030" class="black">Браслет Сиреневого Коня</a> <span class="add">Действует 30 дн.</span></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_magic_pin_belt_i00.png" class="item-icon"></td>
+<td iteminfo="13954">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=13954" class="black">Тряпичный Пояс с Малой Заклепкой</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="gear-set mar">
+Комплект замечен 8 раз (обновлён 3 недели назад)
+<table class="set-items">
+<tbody>
+<tr>
+<td><img src="common_files/etc_shirts_c_i02.png" class="item-icon"></td>
+<td iteminfo="10493">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=10493" class="black">Шелковая Рубаха</a> <span class="add">CP</span></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_leather_helmet_i00.png" class="item-icon"></td>
+<td iteminfo="2419">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=2419" class="black">Диадема Величия</a></td>
+</tr>
+<tr>
+<td><img src="common_files/weapon_arcana_mace_i01.png" class="item-icon"></td>
+<td iteminfo="11223">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=11223" class="black">Посох Тайн - Природа</a> <span class="add">Проницательность</span></td>
+</tr>
+<tr>
+<td><img src="common_files/shield_dark_crystal_shield_i00.png" class="item-icon"></td>
+<td iteminfo="641">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=641" class="black">Щит Кристалла Тьмы</a></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_t85_g_i00.png" class="item-icon"></td>
+<td iteminfo="5776">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=5776" class="black">Рукавицы Величия</a> <span class="add">Магический</span></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_t85_ul_i00.png" class="item-icon"></td>
+<td iteminfo="10798">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=10798" class="black">Мантия Величия- PvP</a></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_t85_b_i00.png" class="item-icon"></td>
+<td iteminfo="5788">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=5788" class="black">Сапоги Величия</a> <span class="add">Магический</span></td>
+</tr>
+<tr>
+<td><img src="common_files/br_black_gem_mask_i00.png" class="item-icon"></td>
+<td iteminfo="20429">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=20429" class="black">Маска из Черных Камней</a> <span class="add">Энергия - 7 дн.</span></td>
+</tr>
+<tr>
+<td><img src="common_files/etc_rbracelet_c_i00.png" class="item-icon"></td>
+<td iteminfo="13295">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=13295" class="black">Браслет Пайлаки</a></td>
+</tr>
+<tr>
+<td><img src="common_files/etc_rbracelet_aga_agit_i00.png" class="item-icon"></td>
+<td iteminfo="20030">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=20030" class="black">Браслет Сиреневого Коня</a> <span class="add">Действует 30 дн.</span></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_magic_pin_belt_i00.png" class="item-icon"></td>
+<td iteminfo="13954">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=13954" class="black">Тряпичный Пояс с Малой Заклепкой</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="gear-set mar">
+Комплект замечен 3 раза (обновлён месяц назад)
+<table class="set-items">
+<tbody>
+<tr>
+<td><img src="common_files/etc_shirts_c_i02.png" class="item-icon"></td>
+<td iteminfo="10493">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=10493" class="black">Шелковая Рубаха</a> <span class="add">CP</span></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_helmet_i00.png" class="item-icon"></td>
+<td iteminfo="512">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=512" class="black">Шлем Кристалла Тьмы</a></td>
+</tr>
+<tr>
+<td><img src="common_files/weapon_arcana_mace_i01.png" class="item-icon"></td>
+<td iteminfo="11223">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=11223" class="black">Посох Тайн - Природа</a> <span class="add">Проницательность</span></td>
+</tr>
+<tr>
+<td><img src="common_files/arcana_sigil_i00.png" class="item-icon"></td>
+<td iteminfo="12811">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=12811" class="black">Символ Аркана</a></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_t76_g_i00.png" class="item-icon"></td>
+<td iteminfo="5767">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=5767" class="black">Перчатки Кристалла Тьмы</a> <span class="add">Магический</span></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_t76_ul_i00.png" class="item-icon"></td>
+<td iteminfo="2407">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=2407" class="black">Мантия Кристалла Тьмы</a></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_t76_b_i00.png" class="item-icon"></td>
+<td iteminfo="5779">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=5779" class="black">Сапоги Кристалла Тьмы</a> <span class="add">Магический</span></td>
+</tr>
+<tr>
+<td><img src="common_files/accessory_ae_karm_i00.png" class="item-icon"></td>
+<td iteminfo="13238">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=13238" class="black">Знак Ае</a></td>
+</tr>
+<tr>
+<td><img src="common_files/etc_rbracelet_c_i00.png" class="item-icon"></td>
+<td iteminfo="13295">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=13295" class="black">Браслет Пайлаки</a></td>
+</tr>
+<tr>
+<td><img src="common_files/br_aga_threehead_i00.png" class="item-icon"></td>
+<td iteminfo="20970">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=20970" class="black">Браслет Печати Агатиона - Трехглавый Дракон</a> <span class="add">Легкая Походка</span></td>
+</tr>
+<tr>
+<td><img src="common_files/armor_magic_pin_belt_i00.png" class="item-icon"></td>
+<td iteminfo="13954">
+<a href="http://l2on.ru/?c=items&amp;a=item&amp;id=13954" class="black">Тряпичный Пояс с Малой Заклепкой</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<!-- FOOTER -->
+</div>
+</td>
+<td style="padding: 1em 5px 5px;" valign="top"><iframe class=" eucszfptufqdrtrqnhrv" src="common_files/a_002.htm" frameborder="0" height="400" scrolling="no" width="240"></iframe></td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+<div class="hFooter"></div>
+</div>
+<div class="page-footer">
+<table class="inv" height="100%" width="100%">
+<tbody><tr><td style="padding: 10px;" valign="bottom">
+<div id="footer" style="border-top: 1px solid rgb(221, 221, 221); padding-top: 20px;">
+<table class="inv" width="100%">
+<tbody><tr><td>
+<span style="color: rgb(119, 119, 119);">©&nbsp;2009–2011&nbsp;«L2on.ru»</span>
+<span style="margin-left: 30px;"><a href="http://l2on.ru/?c=help">Помощь</a></span>
+<span style="margin-left: 15px;"><a href="http://l2on.ru/?c=adv">Реклама</a></span>
+<span style="margin-left: 15px; color: rgb(119, 119, 119);">Обратная связь: <a href="mailto:a@l2on.ru">a@l2on.ru</a></span>
+</td><td align="right">
+<style type="text/css">
+.faded-banner IMG {opacity:0.7; -moz-opacity:0.7; filter:alpha(opacity=70);}
+.faded-banner IMG:hover {opacity:1.0; -moz-opacity:1.0; filter:alpha(opacity=100);}
+</style>
+<!--<span style="margin-right: 2em;" class="faded-banner"><a href="http://gamermedia.ru/index.php?page=l2on"><img src="/img/gamermedia.png" border="0" width="163" height="31" alt="GamerMedia"></a></span>-->
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t14.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><a href="http://www.liveinternet.ru/click" target="_blank"><img src="common_files/hit.gif" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" border="0" height="31" width="88"></a><!--/LiveInternet-->
+
+</td>
+</tr>
+</tbody></table>
+</div>
+</td></tr>
+</tbody></table>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="common_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7038791-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<div class="" style="display: none; left: 350px; right: auto; top: 719px;" id="tooltip"><h3 style="display: none;"></h3><div class="body"><span id="iteminfo_tag"><img src="common_files/etc_shirts_c_i02.png" height="32" width="32"><br><span class="name">Шелковая Рубаха</span>&nbsp;<span class="addname">CP</span>&nbsp;<img src="common_files/grade_C.gif"> <sup>27</sup><br><i>Нижнее белье</i><br><br><span class="stats">Кристаллов: <i>27</i><br>Цена по кристаллам: <i>51 975</i><br>Физ. Защита: <i>17</i><br>Вес: <i>130</i><br>Цена на рынке: <i>-</i></span><br><br>Увеличивает Макс. CP на 354 при модификации на 4 и более.<br></span></div><div style="display: none;" class="url"></div></div></body></html>

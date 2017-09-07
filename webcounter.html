@@ -1,0 +1,38 @@
+<html><head><title>Web Counter Demo</title></head><body>
+
+<h2>Overview</h2>
+<p>This is a server-side application, hosted on kiev-app.us.to, which consists of an <b>image</b> http://kiev-app.us.to/WebCounter/CounterServlet?accountId=&lt;accountId&gt;&pageId=&lt;pageId&gt;[&showCounter] and <b>statistics page</b> http://kiev-app.us.to/WebCounter/CounterServlet?accountId=&lt;accountId&gt;&showStatistics</p>
+
+<h2>How To Use</h2>
+<p>Put an image provided above into your web-page, use any combination of characters for <b>accountId</b> and <b>pageId</b>; use <b>showCounter</b> flag to display counter digits in the image. Use <b>accountId</b> you've chosen earlier to access <b>statistics page</b> provided above.</p>
+
+<h2>Example</h2>
+<p>
+Image src: http://kiev-app.us.to/WebCounter/CounterServlet?accountId=vgrn-at-i-com-ua&pageId=webcounter&showCounter<br>
+<img src="http://kiev-app.us.to/WebCounter/CounterServlet?accountId=vgrn-at-i-com-ua&pageId=webcounter&showCounter" height="100"><br>
+
+Statistics page URL: http://kiev-app.us.to/WebCounter/CounterServlet?accountId=vgrn-at-i-com-ua&showStatistics<br>
+<span id="statSpan"><input type="button" value="Show Statistics" onclick="showStatistics()"></span>
+</p>
+</body>
+
+<script type="text/javascript">
+function showStatistics() {
+	document.getElementById("statSpan").innerHTML = "<iframe width=\"100%\" height=\"50%\" src=\"http://kiev-app.us.to/WebCounter/CounterServlet?accountId=vgrn-at-i-com-ua&showStatistics\"></iframe>";
+}
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9909146-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>

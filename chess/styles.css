@@ -1,0 +1,7 @@
+table, tr, td {
+	text-align: center;
+	vertical-align: middle;
+}
+.whitecell, .blackcell {
+	font: 32pt Chess Line;
+}

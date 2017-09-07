@@ -1,0 +1,322 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
+<head><title>L2 C1 Test Server</title>
+<script type="text/javascript" src="tabber-minimized.js"></script>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<link rel="stylesheet" href="tabber.css" type="text/css">
+
+<script type="text/javascript">
+
+/* Optional: Temporarily hide the "tabber" class so it does not "flash"
+   on the page as plain HTML. After tabber runs, the class is changed
+   to "tabberlive" and it will appear. */
+
+document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+
+</script>
+<style type="text/css">.red {color: red;} .green {color: darkgreen;}</style>
+
+<style type="text/css">
+	a.whitelink {
+		color: white;
+		text-decoration: none;
+	}
+	a.whitelink:hover {
+		text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+<h1 style="margin-bottom:0;padding-bottom:0;"><a name="top">Lineage2 C1 Test Server</a></h1>
+<span style="margin-left:0;padding-left:5cm;" id="random_ad">...yeah, that is <b>exactly</b> what you need!</span>
+
+
+<h1><a name="toc">Table of Contents</a></h1>
+<p style="font-size: 10pt;"><a href="#toc">Back to TOC</a> / <a href="#top">Back to TOP</a></p>
+<ul type="square" style="font-size: 14pt;">
+<li><a href="#3steps">Three Steps to Start Playing</a>
+<li><a href="#acc_mgmnt">Account Management</a>
+<li><a href="#client_dl">Client Download</a>
+<li><a href="#srv_stats">Server Statistics</a>
+</ul>
+<p style="font-size: 10pt;"><a href="#toc">Back to TOC</a> / <a href="#top">Back to TOP</a></p>
+
+
+<h1><a name="3steps">Three Steps to Start Playing</a></h1>
+<p style="font-size: 10pt;"><a href="#toc">Back to TOC</a> / <a href="#top">Back to TOP</a></p>
+<p> Only three quick steps to start playing right now!
+<ol>
+<li><a href="#acc_mgmnt">Register</a> (create your ID and PWD to login into game)
+<li><a href="#client_dl">Download</a> game client and patch, unpack to your desired client folder
+<li>Run system\l2.exe from your client folder, login with your registered ID and PWD
+</ol>
+</p>
+<p style="font-size: 10pt;"><a href="#toc">Back to TOC</a> / <a href="#top">Back to TOP</a></p>
+
+
+<h1><a name="acc_mgmnt">Account Management</a></h1>
+<p style="font-size: 10pt;"><a href="#toc">Back to TOC</a> / <a href="#top">Back to TOP</a></p>
+
+<table cellspacing="0" cellpadding="0"><tr valign="top"><td><div class="tabber">
+
+<div class="tabbertab" title="Create Account">
+<p><form action="http://kiev-app.dyndns.org/911/C1RegistrationServlet" method="POST" id="create_account_form">
+<input type="hidden" name="action" value="create_account">
+<p>Required fields are marked with asterisk (*)</p>
+<fieldset><legend>Login and Password Recovery Information</legend>
+<table>
+<tr><td>* Login Name (ID):</td><td><input type="text" name="login_id"></td><td>up to 14 alphabetical letters or numbers</td></tr>
+
+<tr><td>* Password (PWD):</td><td><input type="password" name="login_pwd"></td><td>up to 16 characters, spaces are trimmed</td></tr>
+<tr><td>* Repeat Password:</td><td><input type="password" name="login_pwd2"></td><td>must match your password</td></tr>
+<tr><td>Security Question 1:</td><td colspan="2"><input type="text" name="quiz1" size="50"></td></tr>
+<tr><td>Security Answer 1:</td><td colspan="2"><input type="text" name="quiz_answer1" size="50"></td></tr>
+<tr><td>Security Question 2:</td><td colspan="2"><input type="text" name="quiz2" size="50"></td></tr>
+<tr><td>Security Answer 2:</td><td colspan="2"><input type="text" name="quiz_answer2" size="50"></td></tr>
+</table>
+</fieldset>
+<fieldset><legend>Personal Information</legend>
+
+<p>Your personal information is kept safe and can be used only for account/password recovery purposes. It is highly recommended that you provide your email address so it can be used to recover your account password.</p>
+<table>
+<tr><td>Name:</td><td><input type="text" name="name"></td><td>up to 15 characters</td></tr>
+<tr><td>Email:</td><td><input type="text" name="email"></td><td></td></tr>
+<tr><td>Address Line 1:</td><td colspan="2"><input type="text" name="addr1" size="50"></td></tr>
+<tr><td>Address Line 2:</td><td colspan="2"><input type="text" name="addr2" size="50"></td></tr>
+<tr><td>Postal Code:</td><td><input type="text" name="zip_code" size="6"></td><td>5 or 6 digits number</td></tr>
+<tr><td>Phone Number:</td><td><input type="text" name="phone"></td><td></td></tr>
+
+<tr><td>Mobile Phone Number:</td><td><input type="text" name="phone_mobile"></td><td></td></tr>
+</table>
+</fieldset>
+<fieldset><legend>Invitation Information</legend>
+<p>Here you can specify your invitation code if you have one. Invitation system is used to enable some additional features on user's account. </p>
+<p>Invitation Code: <input type="text" name="invitation_code" size="50" value=""></p>
+</fieldset>
+<p><label><input type="checkbox" name="optin_email" value="true"> Please send me news and special offers by email</label><br>
+<label><input type="checkbox" name="optin_age" value="true"> * I certify that I am at least 13 years old</label><br>
+
+<label><input type="checkbox" name="optin_owner" value="true"> * I certify that I am creating this account for personal use and will not share my login information with anyone</label><br>
+<label><input type="checkbox" name="optin_unique" value="true"> * I certify that I do not have any other accounts in the system</label><br>
+<label><input type="checkbox" name="optin_tac" value="true"> * I have read and agree to the Terms and Conditions</label></p>
+<center><input type="submit" value="Create My Account" style="width: 250px;"></center>
+</form></p></div>
+
+<div class="tabbertab" title="Edit Account">
+<p><form action="http://kiev-app.dyndns.org/911/C1RegistrationServlet" method="POST" id="update_account_form">
+<input type="hidden" name="action" value="update_account">
+<p>Required fields are marked with asterisk (*)</p>
+
+<p id="update_account_messages" style="position: absolute; visibility: hidden;"></p>
+<fieldset><legend>Login and Password Recovery Information</legend>
+<table>
+<tr><td>* Login Name (ID):</td><td><input type="text" name="login_id"></td><td>To load your account information use the button below:</td></tr>
+<tr><td>* Password (PWD):</td><td><input type="password" name="login_pwd"></td><td><input type="button" value="Load My Account Information" id="load_info_btn" onclick="load_account(this);" style="width: 250px;"> <span id="load_info_status"></span></td></tr>
+<tr><td>New Password:</td><td><input type="password" name="login_newpwd"></td><td>leave blank if you don't want to change your password</td></tr>
+<tr><td>Repeat New Password:</td><td><input type="password" name="login_newpwd2"></td><td>must match your new password</td></tr>
+</table>
+
+</fieldset>
+<fieldset><legend>Personal Information</legend>
+<p>Your personal information is kept safe and can be used only for account/password recovery purposes. It is highly recommended that you provide your email address so it can be used to recover your account password.</p>
+<table>
+<tr><td>Name:</td><td><input type="text" name="name"></td><td>up to 15 characters</td></tr>
+<tr><td>Email:</td><td><input type="text" name="email"></td><td></td></tr>
+<tr><td>Address Line 1:</td><td colspan="2"><input type="text" name="addr1" size="50"></td></tr>
+<tr><td>Address Line 2:</td><td colspan="2"><input type="text" name="addr2" size="50"></td></tr>
+<tr><td>Postal Code:</td><td><input type="text" name="zip_code" size="6"></td><td>5 or 6 digits number</td></tr>
+
+<tr><td>Phone Number:</td><td><input type="text" name="phone"></td><td></td></tr>
+<tr><td>Mobile Phone Number:</td><td><input type="text" name="phone_mobile"></td><td></td></tr>
+</table>
+</fieldset>
+<p><label><input type="checkbox" name="optin_email" value="true"> Please send me news and special offers by email</label><br>
+<label><input type="checkbox" name="optin_owner" value="true"> * I certify that I am owner of this account</label></p>
+<center><input type="submit" value="Update My Account" style="width: 250px;"></center>
+</form></p></div>
+
+<div class="tabbertab" title="Delete Account">
+<p><form action="http://kiev-app.dyndns.org/911/C1RegistrationServlet" method="POST" id="delete_account_form">
+
+<input type="hidden" name="action" value="delete_account">
+<p style="color: red;"><b>WARNING:</b> Account removal is permanent, unrecoverable action!</p>
+<p>All fields are required (*)</p>
+<table>
+<tr><td>* Login Name (ID):</td><td><input type="text" name="login_id"></td></tr>
+<tr><td>* Password (PWD):</td><td><input type="password" name="login_pwd"></td></tr>
+</table>
+<p><label><input type="checkbox" name="optin_delete" value="true"> * I understand and agree that my account (including but not limited to my login information, password recovery information, personal information, any other information created during usage of service via game client or other methods, associated with this account) <nobr>will be <b>deleted permanently</b></nobr> after I click <nobr>"Delete My Account" button</nobr></label><br>
+
+<label><input type="checkbox" name="optin_owner" value="true"> * I certify that I am owner of this account</label></p>
+<center><input type="submit" value="Delete My Account" style="width: 250px;"></center>
+</form></p></div>
+</div></td></tr></table>
+<div style="font-size: small;">Lineage II Account Management System (rev.1.1 [06/27/2011], author: vgorin)</div>
+
+
+<p style="font-size: 10pt;"><a href="#toc">Back to TOC</a> / <a href="#top">Back to TOP</a></p>
+
+
+<h1><a name="client_dl">Client Download</a></h1>
+<p style="font-size: 10pt;"><a href="#toc">Back to TOC</a> / <a href="#top">Back to TOP</a></p>
+<p>To play on our server you need to download Lineage2 C1 English client (&quot;Harbingers of War&quot;) and make it connect to our server by patching it. Here are the links:
+<ol>
+<li>Client Download
+<ul type="square">
+<li>Recomended: <a href="http://www.ex.ua/torrent/557536">Torrent Download</a><br>
+<a href="http://www.ex.ua/load/557536">Direct Download</a> (hosted on ex.ua)<br>
+File Name: Lineage II - Chronicle 1 - Harbingers of War.rar<br>
+File Size: 1,221,324,294 bytes<br>
+Data Format: RAR archive (application/x-rar-compressed)<br>
+MD5:5dad991215ea0cf3f8d69da256d9e9bf
+<li><a href="http://kiev-app2.dyndns.org/Lineage2__C1_Client__Harbingers_of_War.7z">Alternative Link</a> (number of connections limited)<br>
+File Name: Lineage2__C1_Client__Harbingers_of_War.7z<br>
+File Size: 1,096,855,541 bytes<br>
+Data Format: 7-Zip archive (application/x-7z-compressed)<br>
+MD5:38761c25931eaeb503f45a5b0a00401f
+</ul>
+<li>Patch Download
+<ul type="square">
+<li><a href="http://kiev-app.dyndns.org/Lineage2__C1_911Patch.zip">Recomended Link</a><br>
+File Name: Lineage2__C1_911Patch.zip<br>
+File Size: 8,479  bytes<br>
+Data Format: ZIP archive (application/zip)<br>
+MD5:db548a1db219cb6fd0e937e60a556cc7
+<li><a href="http://kiev-app2.dyndns.org/Lineage2__C1_911Patch.zip">Alternative Link</a> (number of connections limited)<br>
+File Name: Lineage2__C1_911Patch.zip<br>
+File Size: 8,479  bytes<br>
+Data Format: ZIP archive (application/zip)<br>
+MD5:db548a1db219cb6fd0e937e60a556cc7
+</ul>
+</ol>
+</p>
+<p style="font-size: 10pt;"><a href="#toc">Back to TOC</a> / <a href="#top">Back to TOP</a></p>
+
+
+<h1><a name="srv_stats">Server Statistics</a></h1>
+<p style="font-size: 10pt;"><a href="#toc">Back to TOC</a> / <a href="#top">Back to TOP</a></p>
+<table>
+<tr><td>Server Status:</td><td>UNKNOWN</td></tr>
+<tr><td>Server Uptime:</td><td>UNKNOWN</td></tr>
+<tr><td>Last Wipe Date:</td><td>June 9, 2011</td></tr>
+<tr><td>Registered Users:</td><td>UNKNOWN</td></tr>
+<tr><td>Characters:</td><td>UNKNOWN</td></tr>
+<tr><td>Users Online:</td><td>UNKNOWN</td></tr>
+</table>
+<p style="font-size: 10pt;"><a href="#toc">Back to TOC</a> / <a href="#top">Back to TOP</a></p>
+<img src="http://kiev-app.dyndns.org/WebCounter/CounterServlet?accountId=911&pageId=c1" height="12">
+</body>
+<script type="text/javascript">
+var random_ads = [
+"...yeah, that is <b>exactly</b> what you need!",
+"...don't hesitate, start playing <b>right now</b>!",
+"...your <b>last</b> chance to feel better!",
+"...the <b>one</b> and the only.",
+"...your <b>only</b> right decision!",
+"...fuck all your problems! Play and <b>relax</b> with us!"
+];
+var random_ad = document.getElementById("random_ad");
+random_ad.innerHTML = random_ads[Math.floor(Math.random() * random_ads.length)];
+</script>
+
+<script type="text/javascript">
+var app_url = "http://kiev-app.dyndns.org/911/";
+var acc_mgmnt_frame = document.getElementById("acc_mgmnt_frame");
+var acc_mgmnt_link = document.getElementById("acc_mgmnt_link");
+
+acc_mgmnt_frame.src = app_url + location.search;
+acc_mgmnt_link.href = acc_mgmnt_frame.src;
+</script>
+<script type="text/javascript">
+var load_info_status = $("#load_info_status");
+var update_account_messages = $("#update_account_messages");
+
+function clear_erros(jQueryContainer) {
+	jQueryContainer.html("");
+	jQueryContainer.css("visibility", "hidden");
+	jQueryContainer.css("position", "absolute");
+	jQueryContainer.removeClass("red");
+}
+
+function load_account(self) {
+	self.disabled = true;
+	load_info_status.removeClass("red");
+	load_info_status.removeClass("green");
+	load_info_status.html("Processing... Please wait.");
+	$.ajax({
+		url: "http://kiev-app.dyndns.org/911/C1RegistrationServlet",
+		type: "POST",
+		data: {
+			ajax_mode: true,
+			action: "load_account",
+			login_id: $("form#update_account_form input[name=login_id]").val(),
+			login_pwd: $("form#update_account_form input[name=login_pwd]").val()
+		},
+		dataType: "json",
+		timeout: 5000,
+		success: function(response, status) {
+			if(response.messages && response.messages.length > 0) {
+				var html = "The following error(s) occurred while loading your account information:\n";
+				html += "<ul type=\"square\">\n";
+				for(var i = 0; i < response.messages.length; i++) {
+					html += "<li>";
+					html += response.messages[i].formattedMessage;
+					html += "\n";
+				}
+				html += "</ul>\n";
+				update_account_messages.html(html);
+				update_account_messages.css("position", "relative");
+				update_account_messages.css("visibility", "visible");
+				update_account_messages.addClass("red");
+				load_info_status.addClass("red");
+				load_info_status.html("An error occurred while loading your account information");
+			}
+			else if(response.account) {
+				clear_erros(update_account_messages);
+				$("form#update_account_form input[name=name]").val(response.account.name);
+				$("form#update_account_form input[name=email]").val(response.account.email);
+				$("form#update_account_form input[name=addr1]").val(response.account.address1);
+				$("form#update_account_form input[name=addr2]").val(response.account.address2);
+				$("form#update_account_form input[name=zip_code]").val(response.account.zip);
+				$("form#update_account_form input[name=phone]").val(response.account.phone);
+				$("form#update_account_form input[name=phone_mobile]").val(response.account.mobile);
+				$("form#update_account_form input[name=optin_email]").attr("checked", response.account.optEmail);
+				load_info_status.addClass("green");
+				load_info_status.html("Account information was loaded successfully!");
+			}
+			else {
+				load_info_status.addClass("red");
+				load_info_status.html("Internal server error occurred");
+			}
+		},
+		error: function(xhr, status, exception) {
+			clear_erros(update_account_messages);
+			load_info_status.addClass("red");
+			if(status == "timeout") {
+				load_info_status.html("Communication error occurred");
+			}
+			else {
+				load_info_status.html("Unknown error occurred");
+			}
+		},
+		complete: function(xhr, status) {
+			self.disabled = false;
+		}
+	});
+}
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9909146-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>

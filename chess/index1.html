@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>Chess</title>
+<link rel="stylesheet" type="text/css" href="fonts.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="grey.css">
+</head>
+<body>
+<table cellspacing="1" cellpadding="0" id="field" class="field" width="100%" height="100%">
+<tr>
+<td width="4%" height="4%"></td>
+<td width="8%" height="4%" class="captioncell">a</td>
+<td width="8%" height="4%" class="captioncell">b</td>
+<td width="8%" height="4%" class="captioncell">c</td>
+<td width="8%" height="4%" class="captioncell">d</td>
+<td width="8%" height="4%" class="captioncell">e</td>
+<td width="8%" height="4%" class="captioncell">f</td>
+<td width="8%" height="4%" class="captioncell">g</td>
+<td width="8%" height="4%" class="captioncell">h</td>
+<td width="4%" height="4%"></td>
+</tr>
+<tr>
+<td height="8%" width="4%" class="captioncell">8</td>
+<td height="8%" width="8%" class="whitecell" id="a8">t</td>
+<td height="8%" width="8%" class="blackcell" id="b8">m</td>
+<td height="8%" width="8%" class="whitecell" id="c8">v</td>
+<td height="8%" width="8%" class="blackcell" id="d8">w</td>
+<td height="8%" width="8%" class="whitecell" id="e8">l</td>
+<td height="8%" width="8%" class="blackcell" id="f8">v</td>
+<td height="8%" width="8%" class="whitecell" id="g8">m</td>
+<td height="8%" width="8%" class="blackcell" id="h8">t</td>
+<td height="8%" width="4%" class="captioncell">8</td>
+</tr>
+<tr>
+<td height="8%" width="4%" class="captioncell">7</td>
+<td height="8%" width="8%" class="blackcell" id="a7">o</td>
+<td height="8%" width="8%" class="whitecell" id="b7">o</td>
+<td height="8%" width="8%" class="blackcell" id="c7">o</td>
+<td height="8%" width="8%" class="whitecell" id="d7">o</td>
+<td height="8%" width="8%" class="blackcell" id="e7">o</td>
+<td height="8%" width="8%" class="whitecell" id="f7">o</td>
+<td height="8%" width="8%" class="blackcell" id="g7">o</td>
+<td height="8%" width="8%" class="whitecell" id="h7">o</td>
+<td height="8%" width="4%" class="captioncell">7</td>
+</tr>
+<tr>
+<td height="8%" width="4%" class="captioncell">6</td>
+<td height="8%" width="8%" class="whitecell" id="a6"></td>
+<td height="8%" width="8%" class="blackcell" id="b6"></td>
+<td height="8%" width="8%" class="whitecell" id="c6"></td>
+<td height="8%" width="8%" class="blackcell" id="d6"></td>
+<td height="8%" width="8%" class="whitecell" id="e6"></td>
+<td height="8%" width="8%" class="blackcell" id="f6"></td>
+<td height="8%" width="8%" class="whitecell" id="g6"></td>
+<td height="8%" width="8%" class="blackcell" id="h6"></td>
+<td height="8%" width="4%" class="captioncell">6</td>
+</tr>
+<tr>
+<td height="8%" width="4%" class="captioncell">5</td>
+<td height="8%" width="8%" class="blackcell" id="a5"></td>
+<td height="8%" width="8%" class="whitecell" id="b5"></td>
+<td height="8%" width="8%" class="blackcell" id="c5"></td>
+<td height="8%" width="8%" class="whitecell" id="d5"></td>
+<td height="8%" width="8%" class="blackcell" id="e5"></td>
+<td height="8%" width="8%" class="whitecell" id="f5"></td>
+<td height="8%" width="8%" class="blackcell" id="g5"></td>
+<td height="8%" width="8%" class="whitecell" id="h5"></td>
+<td height="8%" width="4%" class="captioncell">5</td>
+</tr>
+<tr>
+<td height="8%" width="4%" class="captioncell">4</td>
+<td height="8%" width="8%" class="whitecell" id="a4"></td>
+<td height="8%" width="8%" class="blackcell" id="b4"></td>
+<td height="8%" width="8%" class="whitecell" id="c4"></td>
+<td height="8%" width="8%" class="blackcell" id="d4"></td>
+<td height="8%" width="8%" class="whitecell" id="e4"></td>
+<td height="8%" width="8%" class="blackcell" id="f4"></td>
+<td height="8%" width="8%" class="whitecell" id="g4"></td>
+<td height="8%" width="8%" class="blackcell" id="h4"></td>
+<td height="8%" width="4%" class="captioncell">4</td>
+</tr>
+<tr>
+<td height="8%" width="4%" class="captioncell">3</td>
+<td height="8%" width="8%" class="blackcell" id="a3"></td>
+<td height="8%" width="8%" class="whitecell" id="b3"></td>
+<td height="8%" width="8%" class="blackcell" id="c3"></td>
+<td height="8%" width="8%" class="whitecell" id="d3"></td>
+<td height="8%" width="8%" class="blackcell" id="e3"></td>
+<td height="8%" width="8%" class="whitecell" id="f3"></td>
+<td height="8%" width="8%" class="blackcell" id="g3"></td>
+<td height="8%" width="8%" class="whitecell" id="h3"></td>
+<td height="8%" width="4%" class="captioncell">3</td>
+</tr>
+<tr>
+<td height="8%" width="4%" class="captioncell">2</td>
+<td height="8%" width="8%" class="whitecell" id="a2">p</td>
+<td height="8%" width="8%" class="blackcell" id="b2">p</td>
+<td height="8%" width="8%" class="whitecell" id="c2">p</td>
+<td height="8%" width="8%" class="blackcell" id="d2">p</td>
+<td height="8%" width="8%" class="whitecell" id="e2">p</td>
+<td height="8%" width="8%" class="blackcell" id="f2">p</td>
+<td height="8%" width="8%" class="whitecell" id="g2">p</td>
+<td height="8%" width="8%" class="blackcell" id="h2">p</td>
+<td height="8%" width="4%" class="captioncell">2</td>
+</tr>
+<tr>
+<td height="8%" width="4%" class="captioncell">1</td>
+<td height="8%" width="8%" class="blackcell" id="a1">r</td>
+<td height="8%" width="8%" class="whitecell" id="b1">n</td>
+<td height="8%" width="8%" class="blackcell" id="c1">b</td>
+<td height="8%" width="8%" class="whitecell" id="d1">q</td>
+<td height="8%" width="8%" class="blackcell" id="e1">k</td>
+<td height="8%" width="8%" class="whitecell" id="f1">b</td>
+<td height="8%" width="8%" class="blackcell" id="g1">n</td>
+<td height="8%" width="8%" class="whitecell" id="h1">r</td>
+<td height="8%" width="4%" class="captioncell">1</td>
+</tr>
+<tr>
+<td width="4%" height="4%"></td>
+<td width="8%" height="4%" class="captioncell">a</td>
+<td width="8%" height="4%" class="captioncell">b</td>
+<td width="8%" height="4%" class="captioncell">c</td>
+<td width="8%" height="4%" class="captioncell">d</td>
+<td width="8%" height="4%" class="captioncell">e</td>
+<td width="8%" height="4%" class="captioncell">f</td>
+<td width="8%" height="4%" class="captioncell">g</td>
+<td width="8%" height="4%" class="captioncell">h</td>
+<td width="4%" height="4%"></td>
+</tr>
+</table>
+</body>
+</html>

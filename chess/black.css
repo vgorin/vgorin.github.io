@@ -1,0 +1,16 @@
+.field {
+	background-color: silver;
+	font: bold 12pt Verdana, serif;
+}
+.captioncell {
+	background-color: gray;
+	color: white;
+}
+.whitecell {
+	background-color: white;
+	color: black;
+}
+.blackcell {
+	background-color: black;
+	color: white;
+}

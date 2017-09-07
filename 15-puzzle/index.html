@@ -1,0 +1,504 @@
+<html>
+<head><title>Fifteen Puzzle / Пятнашки</title>
+<style>
+<!--
+
+body,table,tr,td,th,div,input
+{
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 9pt;
+	color: #000000;
+}
+
+body
+{
+	margin: 16pt 20px;
+}
+
+h1,h2,h3
+{
+	margin-bottom: 0pt;
+}
+
+td
+{
+	text-align: center;
+	vertical-align: middle;
+}
+
+td.left
+{
+	text-align: left;
+}
+
+th
+{
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+}
+
+p
+{
+	text-align: justify;
+}
+
+a,a:link,a:visited
+{
+	text-decoration: none;
+}
+
+a:active,a:hover
+{
+	text-decoration: underline;
+}
+
+input.button
+{
+	border: 1px solid #80B080;
+	color: #004000;
+	background-color: #EAFFEA;
+	font-size: 8pt;
+}
+
+-->
+</style>
+</head>
+<body>
+<div id="javacontent" style="display:none;">
+<table cellspacing="0" cellpadding="0"><tr><th>
+<fieldset><legend style="font-size: large; font-weight: bold;">Fifteen Puzzle</legend>
+<table cellspacing="2" cellpadding="2"><tr><th>
+<fieldset id="htmlanchor"></fieldset>
+<table cellspacing="0" cellpadding="0" width="100%">
+<tr><th colspan="2">Moves made: <span id="movescountfield"></span></th></tr>
+<tr><td colspan="2"><img id="spacerimage" src="spacer.gif" width="0" height="3"></td></tr>
+<tr>
+<th><input class="button" type="button" value="New Game" title="Creates new unsorted field of the same size" onclick="startNewGame()"></th>
+<th style="text-align:right;"><input class="button" type="button" value=" New Field " title="Creates new unsorted field of another size" onclick="startNewField()"></th>
+</tr></table>
+</th><th>
+<fieldset><legend>Legend</legend>
+<div id="legend"></div>
+</fieldset>
+<fieldset><legend>Links</legend>
+<a href="changelog.html">Version History</a><br>
+</fieldset>
+</th></tr></table>
+</fieldset>
+</th></tr></table>
+<div style="font-size: 8pt;">Game version: <u>beta 3.3.1</u></div>
+</div>
+<div id="javawarning" style="font-size: 8pt;">
+<span style="color: red;">Javascript support needed to display this page correctly.</span><br>
+Click <a href="http://www.google.com/support/bin/answer.py?answer=23852">here</a> for help.
+</div>
+</body>
+
+<script language="javascript">
+<!--
+	var javawarning = document.getElementById("javawarning");
+	var javacontent = document.getElementById("javacontent");
+	javawarning.style.display = "none";
+	javacontent.style.display = "";
+//-->
+</script>
+
+<script language="javascript">
+<!--
+	function cell_over(i) {
+		game.over(i);
+	}
+	function cell_out(i) {
+		game.out(i);
+	}
+	function cell_click(i) {
+		game.click(i);
+	}
+//-->
+</script>
+
+<script language="javascript">
+<!--
+
+var MIN_DIM = 2;
+var MAX_DIM = 10;
+
+var game;
+var grow = false;
+var dimension = 4;
+
+function startNewGame() {
+	game = new Game(dimension);
+}
+
+startNewGame();
+
+function startNewField() {
+	if(grow) {
+		dimension++;
+		if(dimension >= MAX_DIM) grow = false;
+	}
+	else {
+		dimension--;
+		if(dimension <= MIN_DIM) grow = true;
+	}
+	startNewGame();
+}
+
+function even(x) {
+	var frac = x/2;
+	return Math.floor(frac) == Math.ceil(frac);
+}
+
+function odd(x) {
+	return !even(x);
+}
+
+function Game(dimension) {
+	this.logicmodel = new LogicModel(dimension);
+	this.viewmodel = new ViewModel(dimension);
+   	this.viewmodel.synchronize(this.logicmodel);
+	this.running = !this.logicmodel.sorted();
+
+	this.click = function click(i) {
+		var j = this.logicmodel.current;
+		if(this.running && this.logicmodel.move(i)) {
+			this.viewmodel.synchronizeitem(this.logicmodel, i, j);
+			this.running = !this.logicmodel.sorted();
+		}
+	}
+
+	this.over = function over(i) {
+		this.viewmodel.switchcolor(i, 0, 1);
+	}
+
+	this.out = function out(i) {
+		this.viewmodel.switchcolor(i, 1, 0);
+	}
+}
+
+function ColorPalette() {
+	this.colors = new Array (
+		new Array("#FFF0F0", "#FFD0D0"),	// unmovable
+		new Array("#F0FFF0", "#CAFFCA"),	// movable
+		new Array("#FAFAFA", "#F0F0F0"),	// empty
+		new Array("#FAFAFA", "#F0F0F0")		// complete
+	);
+	this.colorsdesc = new Array (
+		"Unmovable cell",
+		"Movable cell",
+		"Empty cell",
+		"Sorted field"
+	);
+	this.rightplaced = "#000000";
+	this.wrongplaced = "#4040D0";
+	this.unmovable = this.colors[0];
+	this.movable = this.colors[1];
+	this.empty = this.colors[2];
+	this.complete = this.colors[3];
+	this.unmovabledesc = this.colorsdesc[0];
+	this.movabledesc = this.colorsdesc[1];
+	this.emptydesc = this.colorsdesc[2];
+	this.completedesc = this.colorsdesc[3];
+}
+
+function CursorPalette() {
+	this.rightplaced = "default";
+	this.unmovable = "default";
+	this.movable = "pointer";
+	this.empty = "default";
+	this.complete = "default";
+}
+
+function ViewModel(dimension) {
+	this.dimension = dimension;
+	this.length = Math.pow(this.dimension, 2);
+	this.anchor = document.getElementById("htmlanchor");
+	this.legend = document.getElementById("legend");
+	this.tdtagprefix = "td-";
+	this.emptycellchar = " ";
+	this.statusfieldname = "statusfield";
+	this.statusfield;
+	this.movescountfield = document.getElementById("movescountfield");
+	this.colorpalette = new ColorPalette();
+	this.cursorpalette = new CursorPalette();
+	this.sortedstatusmsgs = new Array(
+				"Yeah! You've made it!",
+				"Good job!",
+				"Nice ;-)",
+				"Great!",
+				"Great job!"
+				);
+	this.unsortedstatusmsg = "Move items to sort field";
+	this.basecellsize = 128;
+	this.spacersrc = document.getElementById("spacerimage").src;
+
+	this.generateField = function generateField(dimension) {
+		var spacersrc = this.spacersrc;
+		var overfuncname = "cell_over";
+		var outfuncname = "cell_out";
+		var clickfuncname = "cell_click";
+		var spacesize = 2;
+		var cellsize = this.getcellsize(dimension);
+		var HTML = "";
+		HTML += "<legend id=\"" + this.statusfieldname + "\">" + this.unsortedstatusmsg + "</legend>\n";
+		HTML += "<table cellspacing=\"0\" cellpadding=\"0\">\n";
+		for(var j = 0; j <= dimension * 2; j++) {
+			var jeven = even(j);
+			HTML +=	"<tr>\n";
+				for(var i = 0; i <= dimension * 2; i++) {
+					var ieven = even(i);
+					if(jeven && ieven) {
+						HTML += this.getth(spacersrc, spacesize, spacesize);
+					}
+					else if(jeven && !ieven) {
+						HTML += this.getth(spacersrc, cellsize, spacesize);
+					}
+					else if(!jeven && ieven) {
+						HTML += this.getth(spacersrc, spacesize, cellsize);
+					}
+					else {
+						var cur = Math.floor(j / 2) * dimension + Math.floor(i / 2);
+						HTML += this.gettd(overfuncname, outfuncname, clickfuncname, cur, cellsize);
+					}
+				}
+			HTML += "</tr>\n";
+		}
+		HTML += "</fieldset>\n";
+		HTML += "</table>\n";
+		this.anchor.innerHTML = HTML;
+		this.movescountfield.innerHTML = "0";
+		this.statusfield = document.getElementById(this.statusfieldname);
+	}
+
+	this.generateLegend = function generateLegend() {
+		var legendcellsize = 20;
+		var spacersrc = this.spacersrc;
+		var HTML = "";
+		HTML += "<table cellspacing=\"2\" cellpadding=\"0\">\n";
+		for(var i = 0; i < this.colorpalette.colors.length; i++) {
+			HTML += "<tr><td bgcolor=\"" + this.colorpalette.colors[i][1] + "\"><img width=\"" + legendcellsize + "\" height=\"" + legendcellsize + "\" src=\"" + spacersrc + "\"></td><td class=\"left\">" + this.colorpalette.colorsdesc[i] + "</td></tr>\n";
+		}
+		HTML += "</table>";
+		this.legend.innerHTML = HTML;
+	}
+
+	this.getth = function getth(spacersrc, width, height) {
+		return "<th><img src=\"" + spacersrc + "\" width=\"" + width + "\" height=\"" + height + "\"></th>\n";
+	}
+
+	this.gettd = function gettd(overfuncname, outfuncname, clickfuncname, id, cellsize) {
+		fontsize = Math.round(cellsize/2);
+		return "<td onmouseover=\"" + overfuncname + "(" + id + ")\" onmouseout=\"" + outfuncname + "(" + id + ")\" onclick=\"" + clickfuncname + "(" + id + ")\" id=\"" + this.tdtagprefix + id + "\"" + " style=\"font-size: " + fontsize + "pt;\"></td>\n";
+	}
+
+	this.getcellsize = function getcellsize(n) {
+		return Math.round((this.basecellsize/n)*(1 + Math.log(n)));
+	}
+
+	this.cell = function cell(i) {
+		return document.getElementById(this.tdtagprefix + i);
+	}
+
+	this.switchcolor = function switchcolor(cellid, colorfrom, colorto) {
+		var cell = this.cell(cellid);
+		for(var i = 0; i < this.colorpalette.colors.length; i++) {
+			if(cell.bgColor.toLowerCase() == this.colorpalette.colors[i][colorfrom].toLowerCase()) {
+				cell.bgColor = this.colorpalette.colors[i][colorto];
+				break;
+			}
+		}
+	}
+
+	this.stylezeregion = function stylezeregion(model, region) {
+		if(model.sorted()) {
+			for(var i = 0; i < this.length; i++) {
+				var cell = this.cell(i);
+				cell.bgColor = this.colorpalette.complete[0];
+				cell.style.color = this.colorpalette.rightplaced;
+				cell.style.cursor = this.cursorpalette.complete;
+			}
+		}
+		else {
+			for(var i = 0; i < region.length; i++) {
+				var cell = this.cell(region[i]);
+				if(model.isempty(region[i])) {
+					cell.bgColor = this.colorpalette.empty[0];
+					cell.style.cursor = this.cursorpalette.empty;
+				}
+				else if (model.movable(region[i])) {
+					cell.bgColor = this.colorpalette.movable[0];
+					cell.style.cursor = this.cursorpalette.movable;
+				}
+				else {
+					cell.bgColor = this.colorpalette.unmovable[0];
+					cell.style.cursor = this.cursorpalette.unmovable;
+				}
+				if(model.rightplaced(region[i])) {
+					cell.style.color = this.colorpalette.rightplaced;
+				}
+				else {
+					cell.style.color = this.colorpalette.wrongplaced;
+				}
+			}
+		}
+	}
+
+	this.synchronizeregion = function synchronizeregion(model, region) {
+		for(var i = 0; i < region.length; i++) {
+			var cellinner = model.fieldarray[region[i]] + 1;
+			var cell = this.cell(region[i]);
+			if(cellinner < model.length) {
+				cell.innerHTML = cellinner;
+			}
+			else {
+				cell.innerHTML = this.emptycellchar;
+			}
+		}
+	}
+
+	this.synchronizeitem = function synchronizeitem(model, i, j) {
+		this.synchronizeregion(model, new Array(i, j));
+		this.stylezeregion(model, this.region(i, j));
+		this.statusfield.innerHTML = model.sorted()? this.sortedstatusmsgs[Math.floor(Math.random() * this.sortedstatusmsgs.length)]: this.unsortedstatusmsg;
+		this.movescountfield.innerHTML = model.moves;
+	}
+
+	this.synchronize = function synchronize(model) {
+		var region = new Array();
+		for(var i = 0; i < this.length; i++) {
+			region[region.length] = i;
+		}
+		this.synchronizeregion(model, region);
+		this.stylezeregion(model, region);
+	}
+
+	this.region = function region(i, j) {
+		var region = new Array();
+		if(!this.istop(i)) region.push(i - dimension);
+		if(!this.isleft(i)) region.push(i - 1);
+		region.push(i);
+		if(!this.isright(i)) region.push(i + 1);
+		if(!this.isbottom(i)) region.push(i + dimension);
+		if(!this.istop(j) && (j - this.dimension != i)) region.push(j - this.dimension);
+		if(!this.isleft(j) && (j - 1 != i)) region.push(j - 1);
+		if(!this.isright(j) && (j + 1 != i)) region.push(j + 1);
+		if(!this.isbottom(j) && (j + this.dimension != i)) region.push(j + this.dimension);
+		return region;
+	}
+
+	this.istop = function istop(i) {
+		return i < this.dimension;
+	}
+
+	this.isright = function isright(i) {
+		return this.isleft(i + 1);
+	}
+
+	this.isbottom = function isbottom(i) {
+		return i >= this.length - this.dimension;
+	}
+
+	this.isleft = function isleft(i) {
+		var ratio = i / dimension;
+		return Math.ceil(ratio) == Math.floor(ratio);
+	}
+
+	this.generateField(dimension);
+	this.generateLegend();
+}
+
+function LogicModel(dimension) {
+	this.dimension = dimension;
+	this.length = Math.pow(this.dimension, 2);
+	this.current = this.length - 1;
+	this.fieldarray = new Array();
+	this.moves = 0;
+
+	this.init = function init(length) {
+		for(var i = 0; i < length; i++) {
+			this.fieldarray[i] = i;
+		}
+	}
+
+	this.randomize = function randomize(n) {
+		var even = true;
+		while(this.sorted())
+		for(var i = 0; i < 2 * n; i++) {
+			var p1 = Math.floor(Math.random() * (this.length - 1));
+			var p2 = Math.floor(Math.random() * (this.length - 2));
+			if(p2 >= p1) {
+				p2++;
+			}
+			this.change(p1, p2);
+		}
+	}
+
+	this.change = function change(i, j) {
+		var t = this.fieldarray[i];
+		this.fieldarray[i] = this.fieldarray[j];
+		this.fieldarray[j] = t;
+	}
+
+	this.changable = function changable(i, j) {
+		var distance = Math.abs(i - j);
+		var ratio = Math.max(i, j) / this.dimension;
+		return ((distance == 1) && (Math.ceil(ratio) != Math.floor(ratio))) || distance == dimension;
+	}
+
+	this.move = function move(i) {
+		if(this.changable(i, this.current)) {
+			this.change(i, this.current);
+			this.current = i;
+			this.moves++;
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	this.movable = function movable(i) {
+		return this.changable(i, this.current);
+	}
+
+	this.isempty = function isempty(i) {
+		return i == this.current;
+	}
+
+	this.rightplaced = function rightplaced(i) {
+		return this.fieldarray[i] == i;
+	}
+
+	this.sorted = function sorted() {
+		for(var i = 0; i < this.length; i++) {
+			if(this.fieldarray[i] != i){
+				return false;
+			}
+		}
+		return true;
+	}
+
+	this.init(this.length);
+	this.randomize(this.dimension * 2);
+}
+
+//-->
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9909146-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</html>

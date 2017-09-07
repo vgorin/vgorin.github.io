@@ -1,0 +1,11 @@
+mp3=shaman-heaven7.mp3
+autoload=1
+showslider=0
+width=26
+height=16
+
+bgcolor1=9088d0
+bgcolor2=0a1b47
+buttoncolor=ddccff
+buttonovercolor=ffffff
+
